@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sushi_restu/components/buttons.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -25,7 +26,7 @@ class IntroPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(90.0),
               child: Image.asset(
-                'lib/icons/image.png',
+                'lib/images/image.png',
                 height: 129,
                 width: 129,
               ),
@@ -52,9 +53,10 @@ class IntroPage extends StatelessWidget {
                 height: 2,
               ),
             ),
-            const SizedBox(height: 10),
+            // const SizedBox(height: 50),
 
             // get started button
+            MyButton(text: "Get Started")
           ],
         ),
       ),
