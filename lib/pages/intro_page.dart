@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_restu/components/buttons.dart';
+// import 'package:sushi_restu/components/buttonNew.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -13,6 +14,7 @@ class IntroPage extends StatelessWidget {
         padding: const EdgeInsets.all(50.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             // const SizedBox(height: 25),
             // Name of project or Company Name
@@ -26,7 +28,7 @@ class IntroPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(90.0),
               child: Image.asset(
-                'lib/images/image.png',
+                'lib/images/delivery-truck.png',
                 height: 129,
                 width: 129,
               ),
@@ -37,7 +39,7 @@ class IntroPage extends StatelessWidget {
             Text(
               'Your Wholesale shopping delivered to your home',
               style: GoogleFonts.manrope(
-                fontSize: 44,
+                fontSize: 35,
                 color: Color.fromARGB(255, 10, 8, 18),
                 fontWeight: FontWeight.bold,
               ),
@@ -55,7 +57,12 @@ class IntroPage extends StatelessWidget {
             ),
             // const SizedBox(height: 50),
             // get started button
-            MyButton(text: "Get Started")
+            MyButton(
+              text: "Get Started",
+              onTap: () {
+                Navigator.pushNamed(context, '/menuPage');
+              },
+            )
           ],
         ),
       ),

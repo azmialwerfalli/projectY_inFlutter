@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sushi_restu/pages/menu_page.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'pages/intro_page.dart';
 
@@ -14,6 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: IntroPage(),
+      routes: {
+        '/introPage': (context) => const IntroPage(),
+        '/menuPage': (context) => const MenuPage(),
+      },
     );
   }
 }
