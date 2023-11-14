@@ -29,6 +29,12 @@ class _MenuPageState extends State<MenuPage> {
         price: "67",
         imagePath: "lib/images/canned-food.png",
         rating: "4.2"),
+    //milk two
+    Grocery(
+        name: "Milky",
+        price: "64",
+        imagePath: "lib/images/milk.png",
+        rating: "4.3"),
   ];
 
   @override
@@ -42,7 +48,7 @@ class _MenuPageState extends State<MenuPage> {
           Icons.menu,
           color: blacky30,
         ),
-        title: Text('Hunger',
+        title: Text('Grap',
             style: TextStyle(
               color: blacky30,
             )),
@@ -128,16 +134,16 @@ class _MenuPageState extends State<MenuPage> {
             padding: const EdgeInsets.all(25.0),
             child: TextField(
               decoration: InputDecoration(
-                // border: OutlineInputBorder(
-                //     borderSide: BorderSide(color: Colors.black38),
-                //     borderRadius: BorderRadius.circular(40)),
-                focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: majorelleBlue),
-                    borderRadius: BorderRadius.circular(40)),
-                enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: blacky30),
-                    borderRadius: BorderRadius.circular(40)),
-              ),
+                  // border: OutlineInputBorder(
+                  //     borderSide: BorderSide(color: Colors.black38),
+                  //     borderRadius: BorderRadius.circular(40)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: majorelleBlue),
+                      borderRadius: BorderRadius.circular(40)),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: blacky30),
+                      borderRadius: BorderRadius.circular(40)),
+                  hintText: "Search Here..."),
             ),
           ),
           const SizedBox(height: 15),
@@ -168,6 +174,18 @@ class _MenuPageState extends State<MenuPage> {
           const SizedBox(height: 10),
 
           //top product
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text(
+              "Top Sales Products",
+              style: GoogleFonts.syne(
+                  fontWeight: FontWeight.bold,
+                  color: blacky30,
+                  // color: Colors.deepPurple,
+                  fontSize: 24),
+            ),
+          ),
+          const SizedBox(height: 10),
           Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
