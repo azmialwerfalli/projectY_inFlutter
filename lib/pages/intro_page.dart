@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_restu/components/buttons.dart';
+import 'package:sushi_restu/theme/colors.dart';
 // import 'package:sushi_restu/components/buttonNew.dart';
 
 class IntroPage extends StatelessWidget {
@@ -9,7 +10,7 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 250, 252, 255),
+      backgroundColor: blacky251,
       body: Padding(
         padding: const EdgeInsets.all(50.0),
         child: Column(
@@ -38,9 +39,9 @@ class IntroPage extends StatelessWidget {
             // title
             Text(
               'Your Wholesale shopping delivered to your home',
-              style: GoogleFonts.manrope(
+              style: GoogleFonts.syne(
                 fontSize: 35,
-                color: Color.fromARGB(255, 10, 8, 18),
+                color: blacky30,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -51,7 +52,7 @@ class IntroPage extends StatelessWidget {
               'Theres something for everyone to enjoy in our shop',
               style: GoogleFonts.manrope(
                 fontSize: 22,
-                color: Color.fromARGB(255, 10, 8, 18),
+                color: blacky30,
                 height: 2,
               ),
             ),

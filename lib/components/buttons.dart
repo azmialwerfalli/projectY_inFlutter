@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sushi_restu/theme/colors.dart';
 
 class MyButton extends StatelessWidget {
   final String text;
@@ -15,7 +16,7 @@ class MyButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 185, 0, 96),
+          color: blacky255,
           borderRadius: BorderRadius.circular(20),
         ),
         padding: EdgeInsets.all(20),
@@ -24,11 +25,10 @@ class MyButton extends StatelessWidget {
           children: [
             Text(
               text,
-              style: TextStyle(
-                  color: Color.fromARGB(255, 250, 252, 255), fontSize: 22),
+              style: TextStyle(color: blacky30, fontSize: 22),
             ),
             const SizedBox(width: 30),
-            Icon(Icons.arrow_forward, color: Color.fromARGB(255, 250, 252, 255))
+            Icon(Icons.arrow_forward, color: blacky30)
           ],
         ),
       ),
