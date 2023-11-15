@@ -6,14 +6,14 @@ import 'package:sushi_restu/theme/colors.dart';
 
 import '../components/brand_title.dart';
 
-class MenuPage extends StatefulWidget {
-  const MenuPage({super.key});
+class MainPage extends StatefulWidget {
+  const MainPage({super.key});
 
   @override
-  State<MenuPage> createState() => _MenuPageState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _MenuPageState extends State<MenuPage> {
+class _MainPageState extends State<MainPage> {
   //grocery Menu
   List groceryMenu = [
     //milk
@@ -48,7 +48,7 @@ class _MenuPageState extends State<MenuPage> {
           Icons.menu,
           color: blacky30,
         ),
-        title: Text('Grap',
+        title: Text('Gargap',
             style: TextStyle(
               color: blacky30,
             )),
@@ -86,6 +86,49 @@ class _MenuPageState extends State<MenuPage> {
           //   ]),
           // ),
           // const SizedBox(height: 20),
+          //search bar
+          Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: TextField(
+              decoration: InputDecoration(
+                  // border: OutlineInputBorder(
+                  //     borderSide: BorderSide(color: Colors.black38),
+                  //     borderRadius: BorderRadius.circular(40)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: majorelleBlue),
+                      borderRadius: BorderRadius.circular(40)),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: blacky30),
+                      borderRadius: BorderRadius.circular(40)),
+                  hintText: "Search Here..."),
+            ),
+          ),
+          const SizedBox(height: 10),
+
+          //menu list
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text(
+              "Grocery Menu",
+              style: GoogleFonts.syne(
+                  fontWeight: FontWeight.bold,
+                  color: blacky30,
+                  // color: Colors.deepPurple,
+                  fontSize: 24),
+            ),
+          ),
+          const SizedBox(height: 10),
+
+          Expanded(
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: groceryMenu.length,
+              itemBuilder: (context, index) => BrandTitle(
+                brand: groceryMenu[index],
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
           //promo banner
           Container(
             decoration: BoxDecoration(
@@ -115,11 +158,7 @@ class _MenuPageState extends State<MenuPage> {
                       ),
                       const SizedBox(height: 20),
                       // redeme Button
-                      MyButton(
-                          text: "Redeem",
-                          onTap: () {
-                            Navigator.pushNamed(context, '/mainPage');
-                          })
+                      MyButton(text: "Redeem", onTap: () {})
                     ],
                   ),
                   //image
@@ -132,51 +171,7 @@ class _MenuPageState extends State<MenuPage> {
                   ),
                 ]),
           ),
-          const SizedBox(height: 15),
-          //search bar
-          Padding(
-            padding: const EdgeInsets.all(25.0),
-            child: TextField(
-              decoration: InputDecoration(
-                  // border: OutlineInputBorder(
-                  //     borderSide: BorderSide(color: Colors.black38),
-                  //     borderRadius: BorderRadius.circular(40)),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: majorelleBlue),
-                      borderRadius: BorderRadius.circular(40)),
-                  enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: blacky30),
-                      borderRadius: BorderRadius.circular(40)),
-                  hintText: "Search Here..."),
-            ),
-          ),
-          const SizedBox(height: 15),
-
-          //menu list
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: Text(
-              "Grocery Menu",
-              style: GoogleFonts.syne(
-                  fontWeight: FontWeight.bold,
-                  color: blacky30,
-                  // color: Colors.deepPurple,
-                  fontSize: 24),
-            ),
-          ),
           const SizedBox(height: 10),
-
-          Expanded(
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: groceryMenu.length,
-              itemBuilder: (context, index) => BrandTitle(
-                brand: groceryMenu[index],
-              ),
-            ),
-          ),
-          const SizedBox(height: 10),
-
           //top product
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -234,7 +229,6 @@ class _MenuPageState extends State<MenuPage> {
                     ),
                   ],
                 ),
-
                 //heart
                 Icon(Icons.favorite_outline, color: blacky30, size: 30),
               ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sushi_restu/pages/main_page.dart';
 import 'package:sushi_restu/pages/menu_page.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'pages/intro_page.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/introPage': (context) => const IntroPage(),
         '/menuPage': (context) => const MenuPage(),
+        '/mainPage': (context) => const MainPage(),
       },
     );
   }

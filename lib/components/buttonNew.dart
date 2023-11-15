@@ -1,31 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:sushi_restu/theme/colors.dart';
 
-class MyButtons extends StatelessWidget {
+class StartBtn extends StatelessWidget {
   final String text;
-  const MyButtons({
+  final void Function()? onTap;
+
+  const StartBtn({
     super.key,
     required this.text,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Color.fromARGB(255, 145, 182, 238),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      padding: EdgeInsets.all(20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            text,
-            style: TextStyle(
-                color: Color.fromARGB(255, 250, 252, 255), fontSize: 22),
-          ),
-          const SizedBox(width: 30),
-          Icon(Icons.arrow_forward, color: Color.fromARGB(255, 250, 252, 255))
-        ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          color: lightYellowGreen,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        padding: EdgeInsets.all(20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text,
+              style: TextStyle(color: blacky30),
+            ),
+            const SizedBox(width: 30),
+            Icon(Icons.arrow_forward, color: blacky30)
+          ],
+        ),
       ),
     );
   }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sushi_restu/components/buttons.dart';
 import 'package:sushi_restu/theme/colors.dart';
-// import 'package:sushi_restu/components/buttonNew.dart';
+import 'package:sushi_restu/components/buttonNew.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -58,7 +57,7 @@ class IntroPage extends StatelessWidget {
             ),
             // const SizedBox(height: 50),
             // get started button
-            MyButton(
+            StartBtn(
               text: "Get Started",
               onTap: () {
                 Navigator.pushNamed(context, '/menuPage');
