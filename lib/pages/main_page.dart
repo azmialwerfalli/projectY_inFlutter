@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_restu/components/buttons.dart';
+import 'package:sushi_restu/models/brands.dart';
+import 'package:sushi_restu/models/brands.dart';
 import 'package:sushi_restu/models/grocery.dart';
 import 'package:sushi_restu/theme/colors.dart';
 
 import '../components/brand_title.dart';
+import '../components/categories.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -15,26 +18,29 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   //grocery Menu
-  List groceryMenu = [
+  List brandsMenu = [
     //milk
-    Grocery(
-        name: "Milk",
-        price: "45",
-        imagePath: "lib/images/milk-box.png",
-        rating: "4.6"),
+    Brands(
+      name: "Milk",
+      // price: "45",
+      imagePath: "lib/images/milk-box.png",
+      // rating: "4.6"
+    ),
 
     //tuna
-    Grocery(
-        name: "Tuna",
-        price: "67",
-        imagePath: "lib/images/canned-food.png",
-        rating: "4.2"),
+    Brands(
+      name: "Tuna",
+      // price: "67",
+      imagePath: "lib/images/canned-food.png",
+      // rating: "4.2"
+    ),
     //milk two
-    Grocery(
-        name: "Milky",
-        price: "64",
-        imagePath: "lib/images/milk.png",
-        rating: "4.3"),
+    Brands(
+      name: "Milky",
+      // price: "64",
+      imagePath: "lib/images/milk.png",
+      // rating: "4.3"
+    ),
   ];
 
   @override
@@ -122,9 +128,9 @@ class _MainPageState extends State<MainPage> {
           Expanded(
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: groceryMenu.length,
-              itemBuilder: (context, index) => BrandTitle(
-                brand: groceryMenu[index],
+              itemCount: brandsMenu.length,
+              itemBuilder: (context, index) => Categories(
+                brand: brandsMenu[index],
               ),
             ),
           ),

@@ -1,0 +1,11 @@
+class Brands {
+  String name;
+  String imagePath;
+  Brands(
+      {required this.name,
+      required this.imagePath,});
+
+  String get _name => name;
+  String get _imagePath => imagePath;
+
+}
