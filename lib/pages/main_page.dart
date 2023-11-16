@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:sushi_restu/components/buttons.dart';
 import 'package:sushi_restu/models/brands.dart';
 import 'package:sushi_restu/models/brands.dart';
@@ -8,6 +9,7 @@ import 'package:sushi_restu/theme/colors.dart';
 
 import '../components/brand_title.dart';
 import '../components/categories.dart';
+import '../components/navigation.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -46,6 +48,36 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
+        child: GNav(
+          // backgroundColor: blacky251,
+          // backgroundColor: blacky251,
+          color: blacky70,
+          activeColor: blacky30,
+          tabBackgroundColor: lightYellowGreen,
+          gap: 10,
+          padding: EdgeInsets.all(15),
+          tabs: [
+            GButton(
+              icon: Icons.home,
+              text: 'Home',
+            ),
+            GButton(
+              icon: Icons.favorite,
+              text: 'Likes',
+            ),
+            GButton(
+              icon: Icons.search,
+              text: 'Search',
+            ),
+            GButton(
+              icon: Icons.settings,
+              text: 'Profile',
+            ),
+          ],
+        ),
+      ),
       backgroundColor: blacky251,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
