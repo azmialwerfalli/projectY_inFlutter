@@ -45,6 +45,16 @@ class _MainPageState extends State<MainPage> {
     ),
   ];
 
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
+
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text("Home"),
+    Text("Likes"),
+    Text("Search"),
+    Text("Profile"),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +67,12 @@ class _MainPageState extends State<MainPage> {
           activeColor: blacky30,
           tabBackgroundColor: lightYellowGreen,
           gap: 10,
+          selectedIndex: _selectedIndex,
+          onTabChange: (index) {
+            setState(() {
+              Navigator.pushNamed(context, '/mainPage');
+            });
+          },
           padding: EdgeInsets.all(15),
           tabs: [
             GButton(
