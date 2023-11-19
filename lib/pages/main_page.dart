@@ -68,11 +68,11 @@ class _MainPageState extends State<MainPage> {
           tabBackgroundColor: lightYellowGreen,
           gap: 10,
           selectedIndex: _selectedIndex,
-          onTabChange: (index) {
-            setState(() {
-              Navigator.pushNamed(context, '/mainPage');
-            });
-          },
+          // onTabChange: (index) {
+          //   setState(() {
+          //     Navigator.pushNamed(context, '/mainPage');
+          //   });
+          // },
           padding: EdgeInsets.all(15),
           tabs: [
             GButton(
