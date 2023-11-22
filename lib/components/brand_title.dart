@@ -5,13 +5,13 @@ import 'package:sushi_restu/theme/colors.dart';
 
 class BrandTitle extends StatelessWidget {
   final Grocery brand;
-  final void Function()? onTab
+  // final void Function()? onTab
   const BrandTitle({super.key, required this.brand});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ,
+      // onTap: ,
       child: Container(
         decoration: BoxDecoration(
           color: blacky255,
