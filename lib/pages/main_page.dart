@@ -112,7 +112,7 @@ class _MainPageState extends State<MainPage> {
             Icons.menu,
             color: blacky30,
           ),
-          title: Text('Gargap',
+          title: Text('SMOKE',
               style: TextStyle(
                 color: blacky30,
               )),
