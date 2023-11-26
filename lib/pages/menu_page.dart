@@ -224,7 +224,7 @@ class _MenuPageState extends State<MenuPage> {
                           style: GoogleFonts.syne(
                               fontWeight: FontWeight.bold, fontSize: 32),
                         ),
-                        const SizedBox(height: 10),
+                        // const SizedBox(height: 10),
                         //price
                         Text(
                           "\$24.00",
